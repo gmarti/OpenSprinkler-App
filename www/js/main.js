@@ -5036,7 +5036,7 @@ var showHome = ( function() {
 						var gpioPin = 5, activeState = 1, freePins, sel;
 
 						if ( getHWVersion() === "OSPi" ) {
-							freePins = [ 5, 6, 7, 8, 9, 10, 11, 12, 13, 16, 18, 19, 20, 21, 23, 24, 25, 26 ];
+							freePins = [ 233 ];
 						} else if ( getHWVersion() === "2.3" ) {
 							freePins = [ 2, 10, 12, 13, 14, 15, 18, 19 ];
 						}
@@ -5180,7 +5180,7 @@ var showHome = ( function() {
 
 						button.data( "specialData", hex );
 					} else if ( hs === 3 ) {
-						var sd = pad( select.find( "#gpio-pin" ).val() || "05" );
+						var sd = pad( select.find( "#gpio-pin" ).val() || "005" , 3);
 						sd += select.find( "#active-state" ).val() || "1";
 						button.data( "specialData", sd );
 					} else if ( hs === 4 ) {
